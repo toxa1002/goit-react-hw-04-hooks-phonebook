@@ -1,12 +1,7 @@
-import React, { useState  } from 'react';
-// import { nanoid } from 'nanoid';
+import React, { useState } from 'react';
 import s from './ContactForm.module.css';
 
 const ContactForm = ({ onSubmit }) => {
-    // state = {
-    //     name: '',
-    //     number: '',
-    // };
     const [name, setName] = useState('');
     const [number, setNumber] = useState('');
     
@@ -25,38 +20,6 @@ const ContactForm = ({ onSubmit }) => {
     setName('');
     setNumber('');
   };
-
-    // handleInputChange = e => {
-    //     const { name, value } = e.currentTarget;
-    //     this.setState({ [name]: value });
-    // };
-
-    // handleSubmitForm = e => {
-    //     e.preventDefault();
-    //     const { name, number } = this.state;
-    //     const isValidForm = this.validateForm();
-    //     if (isValidForm) {
-    //         this.props.onSubmit({ id: nanoid(), name, number });
-    //     } else return;
-    //     this.reset();
-    // };
-    // validateForm = () => {
-    //     const { name, number } = this.state;
-    //     const { onChekunike } = this.props;
-    //     if (!name || !number) {
-    //         alert('Empty field! Please fill');
-    //         return false;
-    //     }
-    //     return onChekunike(name);
-    // };
-    // reset = () => {
-    //     this.setState({
-    //         name: '',
-    //         number: '',
-    //     });
-    // };
-
-        // const { name, number } = this.state;
         return (
             <form className={s.form} onSubmit={handleSubmit}>
                 <h3>Name</h3>
